@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PackageManifest.h"
+
 typedef NS_ENUM(NSInteger, LocalContentStatus) {
   LocalContentStatusNone,
   LocalContentStatusEmpty,
@@ -18,7 +20,7 @@ typedef NS_ENUM(NSInteger, LocalContentStatus) {
 
 @interface PackageManager : NSObject
 
-@property (nonatomic, strong, readonly) NSString * __nullable indexPagePath;
+@property (nonatomic, strong, readonly) NSString * __nullable localIndexPath;
 
 - (id __nonnull)initWithManifestUrl:(NSString* __nonnull)manifestUrl
                  preloadContentPath:(NSString* __nonnull)preloadContentPath
